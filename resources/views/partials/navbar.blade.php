@@ -17,6 +17,10 @@
                     class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
                     <ul class="block lg:flex">
                         <li class="group">
+                            <a href="#home"
+                                class="text-base text-primary py-2 mx-5 flex">Beranda</a>
+                        </li>
+                        <li class="group">
                             <a href="#tentang"
                                 class="text-base text-dark py-2 mx-5 flex group-hover:text-primary group-hover:duration-700">Tentang
                                 Kami</a>
@@ -25,17 +29,17 @@
                             <a href="#layanan"
                                 class="text-base text-dark py-2 mx-5 flex group-hover:text-primary group-hover:duration-700">Layanan</a>
                         </li>
-                        {{-- <li class="group">
-                            <a href="#carakerja"
-                                class="text-base text-dark py-2 mx-5 flex group-hover:text-primary group-hover:duration-700">Cara
-                                Kerja</a>
-                        </li> --}}
                         <li class="group">
+                            <a href="#carakerja"
+                                class="text-base text-dark py-2 ml-5 mr-12 flex group-hover:text-primary group-hover:duration-700">Cara
+                                Kerja</a>
+                        </li>
+                        {{-- <li class="group">
                             <a href="#mobileapp"
                                 class="text-base text-dark py-2 mx-5 flex group-hover:text-primary group-hover:duration-700">Unduh
                                 Aplikasi
                                 Seluler</a>
-                        </li>
+                        </li> --}}
                         <li class="group">
                             <a href="{{ route('login') }}"
                                 class="text-base flex justify-center text-center text-primary border-2 border-primary rounded-xl py-2 px-9 hover:bg-primary hover:text-white duration-500">Masuk</a>

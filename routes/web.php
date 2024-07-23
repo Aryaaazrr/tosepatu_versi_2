@@ -36,8 +36,12 @@ Route::middleware('only_sign_in')->group(function () {
     });
     Route::get('login', [AuthController::class, 'login'])->name('login');
     Route::post('login', [AuthController::class, 'authenticate']);
-
+    Route::get('register', [AuthController::class, 'register'])->name('register');
+    
     Route::get('forgot', [ForgotController::class, 'index'])->name('forgot');
+
+    Route::get('auth/google', [AuthController::class, 'google'])->name('google-login');
+    Route::get('auth/google/callback', [AuthController::class, 'handleGoogle'])->name('google-callback');
 });
 
 

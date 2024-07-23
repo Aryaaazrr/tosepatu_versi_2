@@ -26,14 +26,14 @@
                 <div class="flex items-center ml-3">
                     <button id="dropdownAvatarNameButton" data-dropdown-toggle="dropdownAvatarName"
                         data-dropdown-delay="500" data-dropdown-placement="bottom-end"
-                        class="flex items-center text-end justify-end text-sm font-medium text-black rounded-full md:mr-0 focus:ring-2 focus:ring-gray-100 duration-500"
+                        class="flex items-center text-end justify-end text-sm font-medium text-black rounded-full md:mr-0 focus:ring-2 focus:ring-gray-600 duration-500"
                         type="button">
                         <span class="sr-only">Open user menu</span>
                         @if (Auth::user()->foto == null)
-                            <img class="w-8 h-8 mr-2 rounded-full" src="{{ asset('img/default.jpg') }}"
+                            <img class="w-10 h-10 mr-2 rounded-full" src="{{ asset('img/default.jpg') }}"
                                 alt="user photo">
                         @else
-                            <img class="w-8 h-8 mr-2 rounded-full"
+                            <img class="w-10 h-10 mr-2 rounded-full"
                                 src="{{ asset('uploads/profile/' . Auth::user()->foto) }}" alt="user photo">
                         @endif
                         {{ Auth::user()->username }}
@@ -55,36 +55,44 @@
                         <ul class="py-2 text-sm text-gray-700"
                             aria-labelledby="dropdownInformdropdownAvatarNameButtonationButton">
                             <li>
-                                <a href=""
+                                <a href="{{ route('super-beranda') }}"
                                     class="block px-4 py-2 hover:bg-primary hover:text-white duration-200">Beranda</a>
                             </li>
                             <li>
-                                <a href=""
+                                <a href="{{ route('super-pesanan') }}"
                                     class="block px-4 py-2 hover:bg-primary hover:text-white duration-200">Pesanan</a>
                             </li>
                             <li>
-                                <a href=""
+                                <a href="{{ route('super-pelanggan') }}"
+                                    class="block px-4 py-2 hover:bg-primary hover:text-white duration-200">Pelanggan</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('super-produk') }}"
+                                    class="block px-4 py-2 hover:bg-primary hover:text-white duration-200">Produk</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('super-daftar-berita') }}"
                                     class="block px-4 py-2 hover:bg-primary hover:text-white duration-200">Daftar
                                     Berita</a>
                             </li>
                             <li>
-                                <a href=""
+                                <a href="{{ route('super-kategori-berita') }}"
                                     class="block px-4 py-2 hover:bg-primary hover:text-white duration-200">Kategori
                                     Berita</a>
                             </li>
                             <li>
-                                <a href=""
+                                <a href="{{ route('super-kelola-tim') }}"
                                     class="block px-4 py-2 hover:bg-primary hover:text-white duration-200">Kelola
                                     Tim</a>
                             </li>
                             <li>
-                                <a href=""
-                                    class="block px-4 py-2 hover:bg-primary hover:text-white duration-200">Profil</a>
-                            </li>
-                            <li>
-                                <a href=""
+                                <a href="{{ route('super-pengaturan-toko') }}"
                                     class="block px-4 py-2 hover:bg-primary hover:text-white duration-200">Pengaturan
                                     Toko</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('super-pengaturan-profil') }}"
+                                    class="block px-4 py-2 hover:bg-primary hover:text-white duration-200">Pengaturan Profil</a>
                             </li>
                         </ul>
                         <div class="py-2">

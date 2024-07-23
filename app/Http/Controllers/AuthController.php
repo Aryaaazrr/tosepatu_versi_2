@@ -9,9 +9,15 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Str;
+use Laravel\Socialite\Facades\Socialite;
 
 class AuthController extends Controller
 {
+    public function register()
+    {
+        return view('auth.register');
+    }
+
     public function login()
     {
         // dd(Auth::user());
@@ -21,6 +27,28 @@ class AuthController extends Controller
     public function forgot()
     {
         return view('auth.forgot');
+    }
+
+    public function google()
+    {
+        return Socialite::driver('google')->redirect();
+    }
+
+    public function handleGoogle()
+    {
+        $githubUser = Socialite::driver('google')->user();
+
+        $user = User::updateOrCreate([
+            'id' => $githubUser->id,
+        ], [
+            'username' => $githubUser->name,
+            'email' => $githubUser->email,
+            'remember_token' => $githubUser->token,
+        ]);
+
+        Auth::login($user);
+
+        return redirect('/dashboard');
     }
 
     public function authenticate(Request $request)

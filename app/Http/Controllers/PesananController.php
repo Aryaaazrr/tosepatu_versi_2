@@ -59,10 +59,17 @@ class PesananController extends Controller
         $nama_pelanggan = $id_user->username;
 
         $detail = DetailPesanan::where('pesanan_id', $pesanan->id)->get();
-        $status = ['Selesai', 'Dibatalkan'];
         $user = User::whereNotIn('role_id', [1])->get();
         
-        return view('superadmin.content.pesanan-view', ['pesanan' => $pesanan, 'users_mobile' => $nama_pelanggan, 'detail' => $detail, 'status' => $status, 'users' => $user, 'nama_karyawan' => $nama_karyawan]);
+        if ($pesanan->status_pesanan == 'Proses') {
+            $status = ['Selesai', 'Dibatalkan'];
+            return view('superadmin.content.pesanan-view', ['pesanan' => $pesanan, 'users_mobile' => $nama_pelanggan, 'detail' => $detail, 'status' => $status, 'users' => $user, 'nama_karyawan' => $nama_karyawan]);
+        } else {
+            $status = ['Selesai'];
+            return view('superadmin.content.pesanan-view', ['pesanan' => $pesanan, 'users_mobile' => $nama_pelanggan, 'detail' => $detail, 'status' => $status, 'users' => $user, 'nama_karyawan' => $nama_karyawan]);
+        }
+        
+        
     }
     
     /**
@@ -96,11 +103,19 @@ class PesananController extends Controller
         // dd($request->all());
         $karyawan = User::where('username', $request->karyawan)->first();
         // dd($karyawan->id);
-        $pesanan = Pesanan::where('id', $id)->first();
-        $pesanan->update([
-            'users_id' => $karyawan->id,
-            'status_pesanan' => $request->status_pesanan
-        ]);
+        if ($karyawan == null) {
+            $pesanan = Pesanan::where('id', $id)->first();
+            $pesanan->update([
+                'users_id' => $request->karyawan,
+                'status_pesanan' => $request->status_pesanan
+            ]);
+        } else {
+            $pesanan = Pesanan::where('id', $id)->first();
+            $pesanan->update([
+                'users_id' => $karyawan->id,
+                'status_pesanan' => $request->status_pesanan
+            ]);
+        }
         return redirect('superadmin/pesanan')->with('success', 'Pesanan Berhasil Diperbarui!');
     }
 

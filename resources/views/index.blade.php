@@ -46,47 +46,47 @@
     <!-- Akhir Home Section -->
 
     <!-- Awal tentang -->
-    <section class="pt-38 pb-32 mt-14 land" id="tentang">
+    <section class="lg:pt-36 pb-32 land lg:pt-48" id="tentang">
         <div class="container">
-            {{-- <div class="flex flex-wrap"> --}}
-            <div class="w-full px-4">
-                <div class="mx-auto text-center mb-16">
-                    <h3 class="font-bold text-center text-dark text-3xl mb-3">Tentang Kami</h3>
-                    <p class="text-center mb-5">
-                        Terbentuknya kami ber-awal dari sekelompok pertemanan yang sedang memikirkan kehidupan untuk
-                        mengisi
-                        waktu luang.
-                        Dimulainya bisnis ini pada tanggal 21 September 2022, sementara sampai saat ini
-                        tempatnya berada di Kabupaten Jember.
-                    </p>
-                </div>
-            </div>
-            <div class="w-full px-4">
-                <div class="flex flex-wrap items-center justify-center">
-                    <div
-                        class="flex flex-wrap justify-center items-center bg-white drop-shadow-2xl w-2/3 h-max py-10 mb-20 rounded-3xl lg:w-1/2 xl:w-1/3">
-                        <img src="/img/box-1.png" alt="box-1" height="200px" width="180px"
-                            class="flex items-center justify-center" />
-                        <h5 class="text-center text-lg mt-4 text-dark font-bold w-9/12">Struktur layanan bisnis yang
-                            kompeten.</h5>
-                    </div>
-                    <div
-                        class="flex flex-wrap justify-center items-center bg-white drop-shadow-2xl w-2/3 h-max py-10 mb-20 rounded-3xl lg:w-1/2 xl:w-1/3">
-                        <img src="/img/box-2.png" alt="box-1" height="200px" width="168px"
-                            class="flex items-center justify-center" />
-                        <h5 class="text-center text-lg mt-4 mx-3 text-dark font-bold">Kinerja tim solid untuk
-                            kenyamanan bersama.</h5>
-                    </div>
-                    <div
-                        class="flex flex-wrap justify-center items-center bg-white drop-shadow-2xl w-2/3 h-max py-10 rounded-3xl lg:w-1/2 xl:w-1/3 lg:-mt-24">
-                        <img src="/img/box-3.png" alt="box-1" height="200px" width="180px"
-                            class="flex items-center justify-center" />
-                        <h5 class="text-center text-lg mt-4 mx-3 text-dark font-bold">Pelayanan cepat demi kepuasan
-                            pelanggan.</h5>
+            <div class="flex flex-wrap lg:flex-nowrap">
+                <div class="w-full px-4 lg:w-1/2 lg:mr-10">
+                    <div class="mx-auto text-center mb-16">
+                        <h3 class="font-bold text-center text-dark text-3xl mb-3 lg:text-start">Tentang Kami</h3>
+                        <p class="text-center mb-5 lg:text-start">
+                            Terbentuknya kami ber-awal dari sekelompok pertemanan yang sedang memikirkan kehidupan untuk
+                            mengisi
+                            waktu luang.
+                            Dimulainya bisnis ini pada tanggal 21 September 2022, sementara sampai saat ini
+                            tempatnya berada di Kabupaten Jember.
+                        </p>
                     </div>
                 </div>
+                <div class="w-full px-4">
+                    <div class="flex flex-wrap items-center justify-center lg:flex-nowrap lg:-mt-20">
+                        <div
+                            class="flex flex-wrap justify-center items-center bg-white drop-shadow-2xl w-2/3 h-max py-10 mb-20 rounded-3xl lg:w-1/4 lg:mr-12">
+                            <img src="/img/box-1.png" alt="box-1" height="200px" width="180px"
+                                class="flex items-center justify-center" />
+                            <h5 class="text-center text-lg mt-4 text-dark font-bold w-9/12">Struktur layanan bisnis yang
+                                kompeten.</h5>
+                        </div>
+                        <div
+                            class="flex flex-wrap justify-center items-center bg-white drop-shadow-2xl w-2/3 h-max py-10 mb-20 rounded-3xl lg:w-1/4 lg:mr-12 lg:mt-48">
+                            <img src="/img/box-2.png" alt="box-1" height="200px" width="150px"
+                                class="flex items-center justify-center" />
+                            <h5 class="text-center text-lg mt-4 mx-3 text-dark font-bold">Kinerja tim solid untuk
+                                kenyamanan bersama.</h5>
+                        </div>
+                        <div
+                            class="flex flex-wrap justify-center items-center bg-white drop-shadow-2xl w-2/3 h-max py-10 mb-20 rounded-3xl lg:w-1/4">
+                            <img src="/img/box-3.png" alt="box-1" height="200px" width="200px"
+                                class="flex items-center justify-center" />
+                            <h5 class="text-center text-lg mt-4 mx-3 text-dark font-bold">Pelayanan cepat demi kepuasan
+                                pelanggan.</h5>
+                        </div>
+                    </div>
+                </div>
             </div>
-            {{-- </div> --}}
         </div>
     </section>
     <!-- Akhir Tentang -->
@@ -153,52 +153,55 @@
     <!-- Akhir Layanan -->
 
     <!-- Awal Cara Kerja -->
-    {{-- <section class="pt-36 pb-32 land" id="carakerja">
+    <section class="pt-36 pb-32 land" id="carakerja">
         <div class="container">
-            <div class="flex flex-wrap">
-                <div class="bg-white w-full rounded-xl drop-shadow-2xl overflow-hidden mb-10 px-4 py-8">
-                    <h3 class="font-bold text-dark text-3xl mb-7">Cara Kerja</h3>
-                    <div class="w-full h-screen flex items-start">
-                        <div class="w-full h-full flex flex-row">
-                            <div class="flex flex-wrap w-full justify-between mb-10">
-                                <div class="flex flex-wrap items-center justify-between">
-                                    <p class="w-3/4">Download Aplikasi mobile di playstore atau appstore.</p>
+            <div
+                class="flex flex-wrap flex-col bg-white w-full rounded-xl drop-shadow-2xl overflow-hidden mb-10 px-4 py-8">
+                <h3 class="font-bold text-dark text-3xl mb-7 lg:text-5xl lg:mt-10 lg:-mb-30 lg:ml-12">Cara Kerja</h3>
+                <div class="lg:flex lg:flex-row lg:justify-between lg:-mt-16">
+                    <div
+                        class="w-full flex items-start lg:w-1/2 lg:flex-nowrap lg:justify-center lg:items-center lg:mt-20">
+                        <div class="w-full h-full flex flex-col lg:ml-12">
+                            <div class="flex flex-wrap flex-row w-full justify-between mb-10">
+                                <div class="flex items-center justify-between w-full h-12">
+                                    <p class="w-3/4 lg:text-xl">Daftar akun melalui website kami.</p>
                                     <div
                                         class="justify-end -right-1/4 self-end text-center border-4 bg-primary drop-shadow-xl border-primary h-full w-12 justify-items-center items-center">
                                         <span class="text-center font-bold text-3xl text-white">01</span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="flex flex-wrap w-full justify-between mb-10">
-                                <div class="flex flex-wrap items-center justify-between">
-                                    <p class="w-3/4">Daftarkan akun anda dan masuk pada aplikasi.</p>
+                            <div class="flex flex-wrap flex-row w-full justify-between mb-10">
+                                <div class="flex items-center justify-between w-full h-12">
+                                    <p class="w-3/4 lg:text-xl">Setelah daftar akun berhasil silahkan masuk pada aplikasi.
+                                    </p>
                                     <div
                                         class="justify-end -right-1/4 self-end text-center border-2 bg-white drop-shadow-xl border-primary h-full w-12 justify-items-center items-center">
                                         <span class="text-center font-bold text-3xl text-primary items-center">02</span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="flex flex-wrap w-full justify-between mb-10">
-                                <div class="flex flex-wrap items-center justify-between">
-                                    <p class="w-3/4">Silahkan pilih layanan dan lanjutkan pesananan.</p>
+                            <div class="flex flex-wrap flex-row w-full justify-between mb-10">
+                                <div class="flex items-center justify-between w-full h-12">
+                                    <p class="w-3/4 lg:text-xl">Pilih layanan yang tersedia dan buat pesanan.</p>
                                     <div
                                         class="justify-end -right-1/4 self-end text-center border-2 bg-white drop-shadow-xl border-primary h-full w-12 justify-items-center items-center">
                                         <span class="text-center font-bold text-3xl text-primary items-center">03</span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="flex flex-wrap w-full justify-between mb-10">
-                                <div class="flex flex-wrap items-center justify-between">
-                                    <p class="w-3/4">Tunggu status pesanan terkonfimasi oleh admin.</p>
+                            <div class="flex flex-wrap flex-row w-full justify-between mb-10">
+                                <div class="flex items-center justify-between w-full h-12">
+                                    <p class="w-3/4 lg:text-xl">Tunggu status pesanan terkonfimasi oleh admin.</p>
                                     <div
                                         class="justify-end -right-1/4 self-end text-center border-2 bg-white drop-shadow-xl border-primary h-full w-12 justify-items-center items-center">
                                         <span class="text-center font-bold text-3xl text-primary items-center">04</span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="flex flex-wrap w-full justify-between mb-10">
-                                <div class="flex flex-wrap items-center justify-between">
-                                    <p class="w-3/4">Setelah konfirmasi, pesanan akan di proses.</p>
+                            <div class="flex flex-wrap flex-row w-full justify-between mb-10">
+                                <div class="flex items-center justify-between w-full h-12">
+                                    <p class="w-3/4 lg:text-xl">Setelah konfirmasi, pesanan akan di proses.</p>
                                     <div
                                         class="justify-end -right-1/4 self-end text-center border-2 bg-white drop-shadow-xl border-primary h-full w-12 justify-items-center items-center">
                                         <span class="text-center font-bold text-3xl text-primary items-center">05</span>
@@ -206,18 +209,18 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="flex flex-wrap w-full justify-end mb-10">
-                            <img src="/img/cara-kerja.png" alt="cara-kerja" />
-                        </div>
+                    </div>
+                    <div class="flex flex-wrap w-full justify-end mb-10 lg:w-1/2 lg:items-end lg:flex-nowrap lg:-mt-10">
+                        <img src="/img/cara-kerja.png" alt="cara-kerja" />
                     </div>
                 </div>
             </div>
         </div>
-    </section> --}}
+    </section>
     <!-- Akhir Cara Kerja -->
 
     <!-- Awal mobile app -->
-    <section class="pt-36 pb-32 bg-grey land" id="mobileapp">
+    {{-- <section class="pt-36 pb-32 bg-grey land" id="mobileapp">
         <div class="container">
             <div class="flex flex-wrap">
                 <div class="w-full px-4 flex item-center justify-center">
@@ -241,6 +244,6 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- Akhir mobile app -->
 @endsection

@@ -15,13 +15,11 @@ return new class extends Migration
     {
         Schema::create('users_mobile', function (Blueprint $table) {
             $table->id();
-            $table->string('id_users')->unique();
             $table->string('username');
             $table->string('email')->unique();
             $table->string('password');
             $table->string('no_telp', 15)->unique();
-            $table->string('foto');
-            $table->timestamp('email_verified_at')->nullable();
+            $table->string('foto')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

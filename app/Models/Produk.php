@@ -17,4 +17,15 @@ class Produk extends Model
     {
         return $this->hasMany(User::class, 'users_id');
     }
+    
+    public function akses_layanan()
+    {
+        return $this->hasMany(AksesLayanan::class);
+    }
+    
+    public function wilayah()
+    {
+        return $this->belongsToMany(Wilayah::class, 'akses_layanan');
+    }
+
 }

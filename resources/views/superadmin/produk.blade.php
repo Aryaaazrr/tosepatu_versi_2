@@ -71,7 +71,7 @@
                                     {{ $value->nama_layanan }}
                                 </td>
                                 <td class="px-6 py-4">
-                                    {{ $value->harga_layanan }}
+                                    {{ currency_IDR($value->harga_layanan) }}
                                 </td>
                                 <td class="px-6 py-4">
                                     <a href="{{ route('super-edit-produk', $value->id) }}"

@@ -1,46 +1,46 @@
 <footer class="bg-white pt-20 pb-12" id="footer">
     <div class="container">
-        <div class="flex flex-wrap justify-between">
-            <div class="flex items-start justify-center">
-                <img src="/img/icon-tab.jpg" alt="logo" width="300px" />
+        <div class="flex flex-wrap justify-between w-full lg:flex-nowrap">
+            <div class="flex items-center justify-center w-full lg:w-1/3">
+                <img src="/img/icon-tab.jpg" alt="logo" width="300px" class="flex items-center justify-center " />
             </div>
-            <div class="flex items-center justify-between">
-                <div class="w-full px-4 mb-12 md:w-1/3">
+            <div class="flex flex-col items-center justify-between w-full lg:flex-row">
+                <div class="w-full px-4 mb-12 md:w-1/3 lg:h-32">
                     <h3 class="font-semibold text-xl text-dark mb-5 text-center">Social Media</h3>
                     <ul class="text-dark text-center">
                         <li>
                             <a href="https://wa.me/message/TJHCXV2IHL45I1"
-                                class="inline-block text-base hover:text-primary mb-3">WhatsApp</a>
+                                class="inline-block text-base hover:text-primary mb-3 duration-500">WhatsApp</a>
                         </li>
                     </ul>
                     <ul class="text-dark text-center">
                         <li>
                             <a href="https://www.instagram.com/tosepatu.kc"
-                                class="inline-block text-base hover:text-primary mb-3">Instagram</a>
+                                class="inline-block text-base hover:text-primary mb-3 duration-500">Instagram</a>
                         </li>
                     </ul>
                 </div>
-                <div class="w-full px-4 mb-12 md:w-1/3">
+                <div class="w-full px-4 mb-12 md:w-1/3 lg:h-32">
                     <h3 class="font-semibold text-xl text-dark mb-5 text-center">Location</h3>
                     <ul class="text-dark text-center">
                         <li>
-                            <a href="/" class="inline-block text-base hover:text-primary mb-3">Jl. Tawang Mangu
+                            <a href="/" class="inline-block text-base hover:text-primary mb-3 duration-500">Jl. Tawang Mangu
                                 Gg 3 No 20 (Gang Buntu Kontrakan Pak Ribut)</a>
                         </li>
                     </ul>
                 </div>
-                <div class="w-full px-4 mb-12 md:w-1/3">
+                <div class="w-full px-4 mb-12 md:w-1/3 lg:h-32">
                     <h3 class="font-semibold text-xl text-dark mb-5 text-center">New</h3>
                     <ul class="text-dark text-center">
                         <li>
-                            <a href="/" class="inline-block text-base hover:text-primary mb-3">Ingin Update
+                            <a href="/" class="inline-block text-base hover:text-primary mb-3 duration-500">Ingin Update
                                 Diskon, Promo Silahkan Klik Dibawah Ini</a>
                         </li>
                     </ul>
                     <ul class="text-dark text-center">
                         <li>
                             <a href="https://www.instagram.com/tosepatu.kc"
-                                class="inline-block text-base hover:text-primary mb-3">Follow It</a>
+                                class="inline-block text-base bg-primary p-2 rounded-lg text-white hover:bg-transparent hover:border-2 hover:border-primary hover:text-primary mb-3 duration-500">Follow It</a>
                         </li>
                     </ul>
                 </div>

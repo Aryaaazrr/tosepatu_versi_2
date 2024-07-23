@@ -12,4 +12,14 @@ class Berita extends Model
     protected $table = 'berita';
 
     protected $guarded = [];
+
+    public function akses_berita()
+    {
+        return $this->hasMany(AksesBerita::class);
+    }
+    
+    public function wilayah()
+    {
+        return $this->belongsToMany(Wilayah::class, 'akses_berita');
+    }
 }

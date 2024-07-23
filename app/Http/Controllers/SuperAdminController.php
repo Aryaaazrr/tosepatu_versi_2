@@ -72,7 +72,7 @@ class SuperAdminController extends Controller
      * @param  \App\Models\SuperAdmin  $superAdmin
      * @return \Illuminate\Http\Response
      */
-    public function show(SuperAdmin $superAdmin)
+    public function show( $superAdmin)
     {
         //
     }
@@ -83,7 +83,7 @@ class SuperAdminController extends Controller
      * @param  \App\Models\SuperAdmin  $superAdmin
      * @return \Illuminate\Http\Response
      */
-    public function edit(SuperAdmin $superAdmin)
+    public function edit( $superAdmin)
     {
         //
     }
@@ -95,7 +95,7 @@ class SuperAdminController extends Controller
      * @param  \App\Models\SuperAdmin  $superAdmin
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, SuperAdmin $superAdmin)
+    public function update(Request $request,  $superAdmin)
     {
         //
     }
@@ -106,7 +106,7 @@ class SuperAdminController extends Controller
      * @param  \App\Models\SuperAdmin  $superAdmin
      * @return \Illuminate\Http\Response
      */
-    public function destroy(SuperAdmin $superAdmin)
+    public function destroy( $superAdmin)
     {
         //
     }

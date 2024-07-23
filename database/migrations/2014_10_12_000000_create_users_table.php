@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('alamat')->nullable();
             $table->string('no_telp', 15)->nullable()->unique();
             $table->timestamp('email_verified_at')->nullable();
+            $table->string('google_id');
             $table->rememberToken();
             $table->timestamps();
             $table->softDeletes('deleted_at', 0);

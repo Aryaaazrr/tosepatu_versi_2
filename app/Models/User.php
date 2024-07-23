@@ -52,11 +52,23 @@ class User extends Authenticatable implements MustVerifyEmail
         'email_verified_at' => 'datetime',
     ];
 
-    public function role(){
+    public function role()
+    {
         return $this->belongsTo(Role::class);
     }
-    
-    public function wilayah(){
+
+    public function wilayah()
+    {
         return $this->belongsTo(Wilayah::class);
+    }
+
+    public function pesanan()
+    {
+        return $this->hasMany(Pesanan::class);
+    }
+
+    public function layanan()
+    {
+        return $this->hasMany(Pesanan::class);
     }
 }

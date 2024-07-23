@@ -9,8 +9,8 @@
 </div>
     
 <ul>
-    <li>ID Tim: {{ $user->id_users }}</li>
-    <li>Nama Tim: {{ $user->username }}</li>
+    <li>ID Pengguna: {{ $user->id_users }}</li>
+    <li>Nama Lengkap: {{ $user->username }}</li>
     <li>Email: {{ $user->email }}</li>
 </ul>
 </x-mail::panel>

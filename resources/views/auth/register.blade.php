@@ -1,28 +1,20 @@
 @extends('layouts.guest')
 
 @section('content')
-    {{-- <div class="container"> --}}
     <div class="bg-white py-6 rounded-xl border-2 border-slate-100 w-full md:w-7/12 lg:w-6/12 xl:w-3/12 m-5">
         <div class="flex flex-col justify-center items-center text-center mb-3">
-            {{-- <div class="flex h-screen justify-center items-center"> --}}
-            <img src="/img/Logo_ToSepatu_no_bg.png" alt="logo" width="150px">
-            {{-- <div class="w-1/3 h-auto bg-white p-6 rounded border-2 border-slate-100"> --}}
-            {{-- <div class="flex justify-center items-center">
-                        </div> --}}
+            <img src="{{ asset('/img/Logo_ToSepatu_no_bg.png') }}" alt="logo" width="150px">
             <div class="w-10/12">
-                {{-- <div class="flex flex-col justify-center items-center"> --}}
-                <h3 class="font-semibold text-2xl">Masuk</h3>
-                <p class="w-full mt-2 text-slate-400">Masukkan email dan kata sandi Anda di bawah
-                    ini
+                <h3 class="font-semibold text-2xl">Daftar Akun</h3>
+                <p class="w-full mt-2 text-slate-400">Masukkan data diri anda untuk mendaftarkan akun
                 </p>
-                {{-- </div> --}}
 
                 @if (session('status'))
                     {{-- <div class="text-center font-normal p-2 text-red-950 mt-4 bg-red-300 rounded-md">
                         {{ session('message') }}
                     </div> --}}
-                    <div id="alert-2" class="flex p-4 mt-4 text-red-950 rounded-lg bg-red-300" role="alert">
-                        <div class="ml-3 font-normal">
+                    <div id="alert-2" class="flex p-4 mb-4 text-red-950 rounded-lg bg-red-300" role="alert">
+                        <div class="ml-3 text-sm font-medium">
                             {{ session('message') }}
                         </div>
                         <button type="button"
@@ -41,47 +33,58 @@
                 <form action="" method="post">
                     @csrf
                     <div class="flex mt-4 items-start flex-col">
+                        <label for="username" class="text-slate-400">Nama Pengguna</label>
+                        <input type="text" name="username" id="username" placeholder="Masukkan Nama Pengguna"
+                            value="{{ old('username') }}" required
+                            class="w-full h-12 mt-2 border border-gray-400 rounded-md py-2 px-4 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary duration-500">
+                    </div>
+                    <div class="flex mt-4 items-start flex-col">
                         <label for="email" class="text-slate-400">Email</label>
                         <input type="email" name="email" id="email" placeholder="Masukkan Email"
                             value="{{ old('email') }}" required
                             class="w-full h-12 mt-2 border border-gray-400 rounded-md py-2 px-4 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary duration-500">
                     </div>
-                    <div class="grid grid-cols-2 mt-5">
-                        <label for="password" class="text-slate-400 text-start self-center">Kata Sandi</label>
-                        <a href="{{ route('forgot') }}"
-                            class="text-slate-400 text-xs text-end outline-none mt-2 hover:text-primary self-center duration-500">Lupa
-                            Kata
-                            Sandi?</a>
+                    <div class="flex mt-4 items-start flex-col">
+                        <label for="no_telp" class="text-slate-400">No.Whatsapp</label>
+                        <input type="text" name="no_telp" id="no_telp" placeholder="Masukkan No. Whatsapp"
+                            value="{{ old('no_telp') }}" required
+                            class="w-full h-12 mt-2 border border-gray-400 rounded-md py-2 px-4 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary duration-500">
                     </div>
-                    <input type="password" name="password" id="password" placeholder="Masukkan Kata Sandi" required
-                        class="w-full h-12 mt-2 border border-gray-400 rounded-md py-2 px-4 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary duration-500">
-
+                    <div class="flex mt-4 items-start flex-col">
+                        <label for="password" class="text-slate-400">Kata Sandi</label>
+                        <input type="password" name="password" id="password" placeholder="Masukkan Kata Sandi" required
+                            class="w-full h-12 mt-2 border border-gray-400 rounded-md py-2 px-4 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary duration-500">
+                    </div>
+                    <div class="flex mt-4 items-start flex-col">
+                        <label for="confirm-password" class="text-slate-400">Konfirmasi Kata Sandi</label>
+                        <input type="password" name="confirm-password" id="confirm-password"
+                            placeholder="Masukkan Konfirmasi Kata Sandi" required
+                            class="w-full h-12 mt-2 border border-gray-400 rounded-md py-2 px-4 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary duration-500">
+                    </div>
                     <div class="flex flex-col mt-5 mb-2">
                         <button type="submit"
-                            class="w w-full bg-primary rounded-md mb-2 h-12 text-white hover:bg-teal-600 duration-500">Masuk</button>
+                            class="w w-full bg-primary rounded-md h-12 text-white mb-2 hover:bg-teal-600 duration-500">Daftar</button>
+
                         <div class="flex items-center justify-center flex-row">
                             <hr class="border border-gray-300 w-full">
                             <span class="mx-4 text-gray-500">Atau</span>
                             <hr class="border border-gray-300 w-full">
                         </div>
-                        <a href="{{ route('google-login') }}"
+                        <button type="submit"
                             class="flex items-center justify-center w-full bg-white rounded-md mt-2 border border-slate-800 h-12 text-slate-800 duration-500">
                             <img src="{{ asset('img/google.png') }}" alt="logo-google" width="20px" class="mr-2">
-                            Masuk dengan akun Google
-                        </a>
+                            Daftar dengan akun Google
+                        </button>
+
                         <div class="flex mt-3 items-center flex-row justify-center">
                             <div class="flex mt-2 items-center flex-row justify-center">
-                                <p class="text-xs mr-2">Tidak mempunyai akun?</p>
-                                <a href="{{ route('register') }}"
-                                    class="text-xs text-teal-600 outline-none underline duration-500">Daftar Disini</a>
+                                <p class="text-xs mr-2">Sudah mempunyai akun?</p>
+                                <a href="{{ route('login') }}"
+                                    class="text-xs text-teal-600 outline-none underline duration-500">Masuk</a>
                             </div>
                         </div>
-                    </div>
                 </form>
             </div>
         </div>
-        {{-- </div> --}}
     </div>
-    {{-- </div> --}}
-    {{-- </div> --}}
 @endsection

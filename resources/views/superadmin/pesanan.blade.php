@@ -62,7 +62,7 @@
                                     {{ $loop->iteration }}
                                 </td>
                                 <td class="px-6 py-4">
-                                    {{ $value->grand_total }}
+                                    {{ currency_IDR($value->grand_total) }}
                                 </td>
                                 <td class="px-6 py-4">
                                     {{ $value->alamat }}

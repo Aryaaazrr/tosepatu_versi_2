@@ -12,4 +12,14 @@ class AksesLayanan extends Model
     protected $table = 'akses_layanan';
 
     protected $guarded = [];
+
+    public function wilayah()
+    {
+        return $this->belongsTo(Wilayah::class);
+    }
+
+    public function layanan()
+    {
+        return $this->belongsTo(Produk::class);
+    }
 }

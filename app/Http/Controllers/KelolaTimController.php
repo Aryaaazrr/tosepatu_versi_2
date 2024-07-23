@@ -12,6 +12,7 @@ use Carbon\Carbon;
 use DateTimeZone;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
+// use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;

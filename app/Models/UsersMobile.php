@@ -10,4 +10,9 @@ class UsersMobile extends Model
     use HasFactory;
 
     protected $table = 'users_mobile';
+
+    public function wilayah()
+    {
+        return $this->belongsTo(Wilayah::class);
+    }
 }

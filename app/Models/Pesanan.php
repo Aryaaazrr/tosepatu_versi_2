@@ -28,4 +28,9 @@ class Pesanan extends Model
         return $this->belongsTo(User::class);
     }
 
+    public function wilayah()
+    {
+        return $this->belongsTo(Wilayah::class);
+    }
+
 }

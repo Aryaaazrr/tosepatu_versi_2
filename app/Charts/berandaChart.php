@@ -21,13 +21,15 @@ class berandaChart
         $jakartaTimezone = new DateTimeZone('Asia/Jakarta');
         $dateNow = Carbon::now($jakartaTimezone);
 
+        $date = now();
+
         $today_users = Pesanan::whereDate('created_at', $dateNow->toDateString())->count();
         $yesterday_users = Pesanan::whereDate('created_at', $dateNow->subDays(1))->count();
         $users_2_days_ago = Pesanan::whereDate('created_at', $dateNow->subDays(2))->count();
 
         $chart = new \ArielMejiaDev\LarapexCharts\LineChart;
-        $chart->setTitle('Grafik Pesanan Bulan' . ' ' . $dateNow->format('M'))
-            ->setSubtitle($dateNow->format('d M Y'))
+        $chart->setTitle('Grafik Pesanan Bulan' . ' ' . $date->format('M'))
+            ->setSubtitle($date->format('d M Y'))
             ->addLine('Total Pesanan', [$users_2_days_ago, $yesterday_users, $today_users])
             ->setFontFamily('Poppins')
             ->setMarkers(['#2dd4bf', '#E040FB'], 7, 10)

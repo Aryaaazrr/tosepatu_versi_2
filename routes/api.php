@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\LoginController;
 use App\Http\Controllers\Api\RegisterController;
 use App\Http\Controllers\Api\LayananController;
+use App\Http\Controllers\Api\MetodePengirimanController;
+use App\Http\Controllers\Api\PesananController;
 use App\Http\Controllers\Api\TransactionController;
 use App\Http\Controllers\Api\RiwayatController;
 use App\Http\Controllers\Api\UpdatePasswordController;
@@ -32,3 +34,5 @@ Route::match(['GET', 'POST'], 'transaction', [TransactionController::class, 'tra
 // Route::get('detailTransaction', [TransactionController::class, 'detailTransaction']);
 Route::get('riwayat', [RiwayatController::class, 'riwayat']);
 Route::get('UpdatePassword', [UpdatePasswordController::class, 'UpdatePassword']);
+Route::get('metode_pengiriman', [MetodePengirimanController::class, 'MetodePengiriman']);
+Route::get('pesanan', [PesananController::class, 'pesanan']);
